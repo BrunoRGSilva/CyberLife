@@ -1,0 +1,31 @@
+/* Global */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    width: 80%;
+    margin: auto;
+    height: 10px;
+}
+
+.green {
+    color: #84C757;
+}
+
+.white {
+    color: #FFFFFF;
+}
+/* fim GLOBAL */
+
+/* Header */
+.header{
+    background-color: #212529;
+    height: 80px;
+    padding-top: 1px;
+    border-bottom: #84C757 5px;
+}
+/* fim HEADER */
+
