@@ -51,6 +51,11 @@ body {
   
 }
 
+.icone {
+width: 80px;
+margin:-80px 0px 0px 200px;
+}
+
 .nav{
   float: right;
   margin-top: 10px;
