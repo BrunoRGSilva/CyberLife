@@ -6,6 +6,12 @@ body{
     margin-left: 0%;
     color: white;
 }
+
+.container{
+    width: 80%; 
+    margin: auto;
+    height: 50px;
+}
 .cadastro h1{
     color: white;
     font-size: 50px;
