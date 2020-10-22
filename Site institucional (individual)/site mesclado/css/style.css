@@ -1,4 +1,4 @@
-
+/* GLOBAL */
 body {
   font-family: Arial, Helvetica, sans-serif;
   margin: 0;
@@ -13,13 +13,24 @@ body {
   height: 50px;
 }
 
-.btn-orange{
-  background-color: #66CDAA;
-  color: #ffffff;
-  border: none;
-  width: 60px;
-  height: 25px;
+/* Content e sticky são para fixar o header (Jorge e Bruno)  */
+.content {
+  padding: 0;
 }
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%
+}
+
+.sticky + .content {
+  padding-top: 102px;
+}
+
+/* FIM GLOBAL */
+
+/* HEADER & NAV */
 
 .header{
   background-color: #363636;
@@ -47,11 +58,11 @@ body {
 .title-header{
   float: left;
   color: #ffffff;
-  font-size: 24px;
+  font-size: 23px;
   
 }
 
-.icone {
+.title-header .icone {
 width: 80px;
 margin:-80px 0px 0px 200px;
 }
@@ -71,6 +82,10 @@ margin:-80px 0px 0px 200px;
   padding: 20px;
   padding: 10px 20px 0 20px;
 }
+
+/* FIM HEADER & NAV */
+
+/* SHOWCASE */
 .showcase{
   background-image: url(../img/background.png);
   background-size: cover;
@@ -88,39 +103,24 @@ margin:-80px 0px 0px 200px;
 .showcase h1{
   margin: 0;  
   font-size: 55px;
-  padding-top: 100px;
+  padding-top: 70px;
 }
 
-.login{
-  padding: 0px 25px 0px;
-  margin-right: 160px;
-  background-color: #ffffff;
-  color: #21b0a8;
-}
+/* FIM SHOWCASE */
 
-.login h1{
-  margin: 0;
-  float: left;
-}
-.login form{
-  float: right;
-}
-
-.login input{
-  height: 20px;
-  width: 220px;
-}
+/* INICIO BOX */
 
 .box{
-  margin-left: 115px;
+  margin-left: 0;
   overflow: auto;
+  /* border-bottom: #66CDAA solid 5px */
 }
 
 .box .box-item{
 text-align: center;
 width: 300px;
 float: left;
-margin: 40px 20px 0px 35px;
+margin: 40px 20px 0px 30px;
 color:#363636;
 }
 
@@ -128,7 +128,49 @@ color:#363636;
 height: 100px;
 
 }
-/**esse é o pé do site **/
+
+/* FIM BOX */
+
+/* INICIO QUEM SOMOS */
+.quemsomos {
+  margin-left: 0;
+  margin-top: 20px;
+  overflow: auto;    
+}
+.quemsomos h1{
+  color: #363636;
+  text-align: center;
+}
+.quemsomos z{
+  color: #66CDAA;
+}
+.quemsomos .foto-item {
+  text-align: center;
+  width: 300px; 
+  float: left;
+  margin: 40px 20px -20px 30px;
+  color: #363636;
+  
+}
+
+.quemsomos img {
+  border-radius: 90px;
+}
+
+.box-sobre{ 
+ width: 700px;
+ height: 260px;
+ background-color: #363636;
+ background-size: cover;
+ text-align: center;
+ padding: 30px 30px 0px 30px;
+ margin-left: 310px;
+ margin-bottom: 100px;
+ border-radius: 20px;
+ color: white;
+ font-size: 26px;
+}
+/* INICIO FOOTER  */
 .footer {
   background-color:#363636 ;
   overflow: auto;
@@ -140,3 +182,5 @@ height: 100px;
   padding: 20px;
  
 }
+
+/* FIM FOOTER */
