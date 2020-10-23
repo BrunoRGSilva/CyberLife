@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/stylelogin.css">
     <script src="https://kit.fontawesome.com/f7c75dba64.js" crossorigin="anonymous"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <title>Login</title>
 </head>
 
@@ -20,7 +19,7 @@
             <br><br><br>
             <input type="password" id="senha" placeholder="Senha" class="input-senha">
             <br>
-            <u class="esqueceu-senha" onclick="esqueceu()"><b>Esqueceu a senha?</b></u>
+            <u class="esqueceu-senha"><b>Esqueceu a senha?</b></u>
             <br><br>
             <button class="button-entrar" onclick="entrar()"><b>Entrar</b></button>
         </div>
@@ -49,8 +48,4 @@
             senha.value = "";
         }
     }
-    function esqueceu(){
-        alert("Uma confirmação foi enviada para o email informado");
-    }
-    
 </script>
