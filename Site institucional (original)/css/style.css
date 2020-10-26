@@ -56,6 +56,13 @@ body {
   color: white;
 }
 
+.header .nav  img {
+  width: 25px;
+  margin-top: -17px;
+  margin-left: 685px;
+  position: absolute;
+}
+
 .title-header h1,
 .nav ul
 {
@@ -71,16 +78,26 @@ body {
   transition: 0.5s;
   color: #ffffff;
 }
-.nav .como-funciona1 :hover{
+.nav .como-funciona1 :hover {
   transition: 0.5s;
   color: #ffffff;
 }
 
-.nav .contato1 :hover{
+.nav .contato1 :hover {
   transition: 0.5s;
   color: #ffffff;
 }
-.nav .Login1 :hover{
+.nav .Login1 :hover {
+  transition: 0.5s;
+  color: #ffffff;
+}
+
+.nav .dashboard1 :hover {
+  transition: 0.5s;
+  color: #ffffff;
+}
+
+.nav .usuario1 :hover {
   transition: 0.5s;
   color: #ffffff;
 }

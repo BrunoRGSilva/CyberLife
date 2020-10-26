@@ -24,3 +24,4 @@ function limpar() {
     telefone.value = "";
     
 }
+

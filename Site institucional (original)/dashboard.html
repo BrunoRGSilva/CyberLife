@@ -1,143 +1,79 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/dashboard.css">
+    <!-- FONTE -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <title>Dashboard</title>
-    <link rel="stylesheet" href="css/dashboard.css">
 </head>
+
 <body>
 
-    <!-- header da página -->
     <div class="header" id="headersite">
         <div class="container">
             <div class="title-header">
                 <h1>
-                    <span>Cyber</span><z>life</z>
+                    <z>Cyber</z><span>life</span>
                 </h1>
 
                 <img src="img/healthcare.png" class="icone">
             </div>
-            <div class="nav">
+            <div class="nav" id="home">
                 <ul>
-                    <li> <a class="home1" href="index.html"> <b>Home</b></a> </li>
-                    <li><div id="P_dashboard">Dashboard</div</li>
-                    <li>Usuário</li>
+                    <li> <a class="home1" href="index_logado.html"> <b>Home</b></a> </li>
+                    <li> <a class="dashboard1" href="dashboard.html"> <b>Dashboard</b> </a> </li>
+                    <li> <b>Admin</b></li>
                 </ul>
+                <a href="config-orgaos.html"> <img class="engrenagem" src="img/engrenagem.png" alt=""> </a>
             </div>
         </div>
     </div>
+    <div class="content">
+        <div class="painel-dashboard">
+            <div class="container">
+                <div class="box-orgaos">
 
-    <!-- div tempo do trasejo -->
-    <div class="tempo">
-        <div id="msg_tempo">TEMPO DE TRAJETO</div>
-    </div>
+                    <select class="combo" id="combo_orgao" onchange="orgaos()">
+                        <option value="selecionar">-Selecione-</option>
+                        <option value="coracao">Coração</option>
+                        <option value="rim">Rim</option>
+                        <option value="cornea">Córnea</option>
+                    </select>
+                    <div class="inicio">
+                        <p class="inicio-trajeto">Inicio do trajeto: </p>
+                        <input type="datetime" placeholder="Ex: 18:00">
+                        <div class="status">
+                            <h3>ALERTA</h3>
+                            <p>Temperatura a X °C</p>
+                            <p>Temperatura ideal: Y °C</p>
+                        </div>
+                    </div>
 
-    <!-- div com a combo select dos órgãos -->
-    <div>
-        <select id="orgao" onchange="seleciona_tempo()" class="selecionar_orgao">
-            <option value="selecione">- Selecione o órgão desejado-</option>
-            <option value="cora">Coração</option>
-            <option value="rins">Rins</option>
-            <option value="pancreas">Pâncreas</option>
-            <option value="pulmao">Pulmão</option>
-            <option value="figado">Fígado</option>
-            <option value="corneas">Córneas</option>
-        </select>
-    </div>
+                    <div class="fim">
+                        <p>Fim do trajeto:</p>
+                        <input type="datetime" placeholder="Ex: 20:00">
+                    </div>
 
-    <!-- div caixa amarela + palavra status -->
-    <div class="alerta">
-        <span id="status">STATUS</span>
-        <div id="temperatura">
-            <div id="position">
-                <span id="alerta">ALERTA</span><br>
-                <div id="msg_temp">
-                    <span id="temp1">TEMPERATURA A X°C</span><br>
-                    <span id="temp2">TEMPERATURA IDEAL:Y°C <div id="temperatura_ideal"></div></span>
+                </div>
+            </div>
+
+
+            <div class="grafico">
+                <div class="container">
+                    <h3>GRÁFICO</h3>
+                    <img src="img/grafico.png" alt="">
                 </div>
             </div>
         </div>
-    </div>
 
-    <!-- div do gráfico -->
-    <div class="dashboard">
-        <img src="img/grafico.png" id="imagem_grafico">
-    </div>
-
-    <!-- div palavra registros e imagem cinza -->
-    <div class="registros">
-        <span id="registro">REGISTROS</span>
-        <div id="fundo_cinza"></div>
-    </div>
-
-    <!-- footer da página -->
-    <div class="footer">
-        <div class="container">
-            <h3>Cyber<z>life<z><span>&copy; 2020</span></h3>
-        </div>
+        <footer class="rodape">
+            <h3>CYBER<span>LIFE</span> &COPY; 2020</h3>
+        </footer>
     </div>
 
 </body>
+
 </html>
-<script>
-
-    // Script para o header ficar fixado (Jorge e Bruno)
-
-    window.onscroll = function () { myFunction() };
-
-    // Get the header
-    var header = document.getElementById("headersite");
-
-    // Get the offset position of the navbar
-    var sticky = header.offsetTop;
-
-    // Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
-    function myFunction() {
-        if (window.pageYOffset > sticky) {
-            header.classList.add("sticky");
-        } else {
-            header.classList.remove("sticky");
-        }
-    }
-
-    // função para mostrar o tempo de trajeto e a temperatura ideal
-    function seleciona_tempo(){
-
-        if (orgao.value == "cora") {
-            msg_tempo.innerHTML = `4 a 6 horas`;
-            temperatura_ideal.innerHTML = `5°C`;
-        }
-
-        else if (orgao.value == "rins") {
-            msg_tempo.innerHTML = `até 48 horas`;
-            temperatura_ideal.innerHTML = `4°C`;
-        }
-
-        else if (orgao.value == "pancreas") {
-            msg_tempo.innerHTML = `12 a 24 horas`;
-            temperatura_ideal.innerHTML = `5°C`;
-        }
-
-        else if (orgao.value == "pulmao") {
-            msg_tempo.innerHTML = `4 a 6 horas`;
-            temperatura_ideal.innerHTML = `5°C`;
-        }
-
-        else if (orgao.value == "figado") {
-            msg_tempo.innerHTML = `12 a 24 horas`;
-            temperatura_ideal.innerHTML = `4°C`;
-        }
-
-        else if (orgao.value == "corneas") {
-            msg_tempo.innerHTML = `7 dias`;
-            temperatura_ideal.innerHTML = `4°C`;
-        }
-
-        else{
-            msg_tempo.innerHTML = `TEMPO DE TRAJETO`;
-            temperatura_ideal.innerHTML = ``;
-            alert("Escolha o órgão que será transportado")
-        }
-    }
-</script>

@@ -11,7 +11,7 @@
 
 <body>
     <div class="div-esquerda">
-        <a href="index.html"><img  src="img/home.png"style="width:50px; margin-left:2%; margin-top:1%;cursor:pointer;"></a>
+        <a href="index.html"><img  src="img/home.png"style="width:50px; margin-left:2%; margin-top:1%;cursor:pointer;"></a><!--link para o index-->
         <h1 class="conecte-se"> Conecte-se </h1>
         <br>
         <div class="inputs">
@@ -19,9 +19,9 @@
             <br><br><br>
             <input type="password" id="senha" placeholder="Senha" class="input-senha">
             <br>
-            <u class="esqueceu-senha"><b>Esqueceu a senha?</b></u>
+            <u class="esqueceu-senha" onclick="esqueceu()"><b>Esqueceu a senha?</b></u>
             <br><br>
-           <a href="dashboard.html"> <button  class="button-entrar" onclick="entrar()"><b>Entrar</b></button></a>
+            <button  class="button-entrar" onclick="entrar()"> <b> Entrar</b></button><!--link para a dashboard-->
         </div>
     </div>
 
@@ -31,5 +31,5 @@
     </div>
 
 </body>
-
+<script src="jscript/scriptLogin.js"></script>
 </html>

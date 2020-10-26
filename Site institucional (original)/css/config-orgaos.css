@@ -34,6 +34,7 @@ body{
     margin-left:2%;
     margin-top:1%;
     cursor:pointer;
+    position: absolute;
 }
 .logo-home:hover{
     transition:1s; 
